@@ -20,6 +20,8 @@ namespace PackagingChallenge.Controllers
         [HttpPost]
         public ActionResult<List<List<string>>> Post([FromBody] List<PackageServiceModel> package)
         {
+            // Use http://localhost:port/swagger/ to access swagger test page.
+
             //TODO
             /*
              * Call PackagingChallenge.Business domain with this logic implemented there using IoC and

@@ -9,6 +9,7 @@ namespace PackagingChallenge.Business.ServiceModels
     public class PackageListServiceModel
     {
         //TODO describe and document fields for swagger
+        // Use http://localhost:port/swagger/ to access swagger test page.
         public int IndexNumber { get; set; }
         public decimal Weight { get; set; }
         public decimal Cost { get; set; }
