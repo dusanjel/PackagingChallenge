@@ -10,8 +10,7 @@ namespace PackagingChallenge.Controllers
     [Route("api/v1/[controller]")]
     [ApiController]
     public class PackController : ControllerBase
-    {
-        // GET api/values
+    {        
         [HttpGet]
         public ActionResult<bool> Ping()
         {
@@ -21,6 +20,11 @@ namespace PackagingChallenge.Controllers
         [HttpPost]
         public ActionResult<List<List<string>>> Post([FromBody] List<PackageServiceModel> package)
         {
+            //TODO
+            /*
+             * Call PackagingChallenge.Business domain with this logic implemented there using IoC and
+             * constructor dependency injection.
+             */
             List<List<string>> packageResult = new List<List<string>>();           
 
             foreach (var pack in package)

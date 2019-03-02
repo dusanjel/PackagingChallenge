@@ -8,6 +8,7 @@ namespace PackagingChallenge.Business.ServiceModels
 {
     public class PackageListServiceModel
     {
+        //TODO describe and document fields for swagger
         public int IndexNumber { get; set; }
         public decimal Weight { get; set; }
         public decimal Cost { get; set; }
