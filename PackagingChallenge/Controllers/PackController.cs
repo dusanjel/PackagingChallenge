@@ -24,8 +24,8 @@ namespace PackagingChallenge.Controllers
             /*
              * Call PackagingChallenge.Business domain with this logic implemented there using IoC and
              * constructor dependency injection.
-             * Implement in PackagingChallenge.Domain layer entity framework code first and repository/ unit of work pattern
-             * to access database. 
+             * Implement in PackagingChallenge.Domain layer entity framework code first and repository/unit of work, pattern
+             * to access database for data persistence. 
              */
             List<List<string>> packageResult = new List<List<string>>();           
 
