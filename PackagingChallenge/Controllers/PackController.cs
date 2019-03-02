@@ -19,9 +19,36 @@ namespace PackagingChallenge.Controllers
         }
 
         [HttpPost]
-        public ActionResult<string> Post([FromBody] PackageServiceModel value)
+        public ActionResult<List<List<string>>> Post([FromBody] List<PackageServiceModel> package)
         {
-            return "";
+            List<List<string>> packageResult = new List<List<string>>();           
+
+            foreach (var pack in package)
+            {
+                List<string> packageIndexList = new List<string>();
+                decimal MaxWeight = 0;
+                foreach (var item in pack.PackageList)
+                {
+                    if (item.Cost > 100)
+                    {
+                        throw new FormatException();
+                    }
+                    else
+                    {                        
+                        packageIndexList.Add(item.IndexNumber.ToString());
+                        MaxWeight = MaxWeight + item.Weight;
+                    }
+                }
+
+                if (MaxWeight > pack.MaxWeight || pack.MaxWeight > 100)
+                {                   
+                    throw new FormatException();
+                }
+
+                packageResult.Add(packageIndexList);                
+            }            
+
+            return packageResult;
         }         
     }
 }

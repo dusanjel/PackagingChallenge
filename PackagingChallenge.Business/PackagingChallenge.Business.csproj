@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\PackagingChallenge.Domain\PackagingChallenge.Domain.csproj" />
+    <ProjectReference Include="..\PackagingChallenge.Utils\PackagingChallenge.Utils.csproj" />
   </ItemGroup>
 
   <ItemGroup>

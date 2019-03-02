@@ -1,13 +1,16 @@
-﻿using System;
+﻿using PackagingChallenge.Utils.Support;
+using System;
 using System.Collections.Generic;
 using System.Text;
+using static PackagingChallenge.Utils.Support.Enums;
 
 namespace PackagingChallenge.Business.ServiceModels
 {
-    public class PackageServiceModel
+    public class PackageListServiceModel
     {
         public int IndexNumber { get; set; }
-        public int Weight { get; set; }
-        public int Cost { get; set; }
+        public decimal Weight { get; set; }
+        public decimal Cost { get; set; }
+        public Items Item { get; set; }
     }
 }

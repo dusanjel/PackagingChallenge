@@ -12,10 +12,13 @@
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="2.1.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="4.0.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="4.0.1" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\PackagingChallenge.Business\PackagingChallenge.Business.csproj" />
+    <ProjectReference Include="..\PackagingChallenge.Utils\PackagingChallenge.Utils.csproj" />
   </ItemGroup>
 
 </Project>
