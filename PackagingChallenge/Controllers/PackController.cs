@@ -10,7 +10,12 @@ namespace PackagingChallenge.Controllers
     [Route("api/v1/[controller]")]
     [ApiController]
     public class PackController : ControllerBase
-    {        
+    {
+        public PackController()
+        {
+
+        }
+
         [HttpGet]
         public ActionResult<bool> Ping()
         {
