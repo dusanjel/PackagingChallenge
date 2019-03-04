@@ -20,6 +20,8 @@ namespace PackagingChallenge.Domain.IoC
             services.AddSingleton(typeof(IPackageListRepository), typeof(PackageListRepository));
             services.AddSingleton(typeof(IPackageRepository), typeof(PackageRepository));
 
+
+            // Change in accordance to your db directory
             var connection = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Admin\Desktop\PackagingChallenge\PackagingChallenge\PackagingChallenge.Domain\Database\PackagingChallenge.mdf;Integrated Security=True";
             services.AddDbContext<PackagingChallengeContext>
                 (options => options.UseSqlServer(connection));
