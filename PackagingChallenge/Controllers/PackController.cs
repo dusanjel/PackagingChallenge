@@ -61,7 +61,8 @@ namespace PackagingChallenge.Controllers
                     throw new FormatException();
                 }
 
-                packageResult.Add(packageIndexList);                
+                packageResult.Add(packageIndexList);
+                packageRepositoryService.SavePackage(pack);
             }            
 
             return packageResult;

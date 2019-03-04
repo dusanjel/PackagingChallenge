@@ -20,7 +20,8 @@ namespace PackagingChallenge.Business.Services
         {
             var Package = new Package()
             {
-                MaxWeight = model.MaxWeight
+                MaxWeight = model.MaxWeight,
+                PackageList = new List<PackageList>()
             };
 
             foreach (var pack in model.PackageList)
