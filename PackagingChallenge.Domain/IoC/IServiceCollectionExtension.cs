@@ -22,7 +22,7 @@ namespace PackagingChallenge.Domain.IoC
 
 
             // Change in accordance to your db directory
-            var connection = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Admin\Desktop\PackagingChallenge\PackagingChallenge\PackagingChallenge.Domain\Database\PackagingChallenge.mdf;Integrated Security=True";
+            var connection = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\dusan\PackagingChallenge\PackagingChallenge.Domain\Database\PackagingChallenge.mdf;Integrated Security=True";
             services.AddDbContext<PackagingChallengeContext>
                 (options => options.UseSqlServer(connection));
             return services;

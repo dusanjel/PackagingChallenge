@@ -64,7 +64,7 @@ namespace PackagingChallenge.Controllers
                 packageResult.Add(packageIndexList);
 
                 // Not working no time to debug :)
-                // packageRepositoryService.SavePackage(pack);
+                packageRepositoryService.SavePackage(pack);
             }
 
             return packageResult;
