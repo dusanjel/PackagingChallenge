@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using PackagingChallenge.Business.Interfaces;
 using PackagingChallenge.Business.ServiceModels;
 
 namespace PackagingChallenge.Controllers
@@ -10,7 +11,14 @@ namespace PackagingChallenge.Controllers
     [Route("api/v1/[controller]")]
     [ApiController]
     public class PackController : ControllerBase
-    {        
+    {
+        private readonly IPackageRepositoryService packageRepositoryService;
+
+        public PackController(IPackageRepositoryService packageRepositoryService)
+        {
+            this.packageRepositoryService = packageRepositoryService;
+        }
+
         [HttpGet]
         public ActionResult<bool> Ping()
         {

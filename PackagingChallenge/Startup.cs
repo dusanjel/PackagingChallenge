@@ -9,7 +9,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using PackagingChallenge.Business.Interfaces;
 using PackagingChallenge.Business.IoC;
+using PackagingChallenge.Business.Services;
 using Swashbuckle.AspNetCore.Swagger;
 
 namespace PackagingChallenge
@@ -34,7 +36,8 @@ namespace PackagingChallenge
             });
 
             // Custom services Dusan Jelic
-            services.AddPackagingChallengeBusiness();            
+            services.AddPackagingChallengeBusiness();
+            services.AddTransient<IPackageRepositoryService, PackageRepositoryService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
